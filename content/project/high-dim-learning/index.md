@@ -42,36 +42,25 @@ slides: ""
 
 When learning a representation, the quality of the learned model (whether of the world, task or system itself) depends on the quality of data used to build the model. but how do we ensure that we explore and receive valuable information, particularly for high-dimensional search spaces where the information is sparse or hard to interpret (and therefore learn from)?
 
-## Distribution-Based Active Exploration and the KL-Divergence Measure
+## K-L Ergodic Exploration from Equilibrium (KL-E3)
+### Distribution-Based Active Exploration and the KL-Divergence Measure
 
-For efficient learning, we want to drive the exploration of the robot to prioritize obtaining more informative data. To do this, we define an information distribution over the search space that represents the importance measure of the data (such as measures of linear independence from sparse Gaussian processes or measures representing model parameter uncertainty with respect to the search space). By defining the importance measure based on the state space, we can generate a representation of the state space that prioritizes states that generate highly informative data.
+{{< figure src="quadcopter_learning.gif" title="KL-E3 quadcopter (in blue) actively acquiring data to learn its stochastic model compared to a quadcopter acquiring data using an information-maximizing method (in green)." lightbox="true" width="240" height="253">}}
 
 
-<figure>
-  <img src="quad_exploration_results.png" alt="Quadrotor Exploration"  height="128" width = "666"
-  />
-  <figcaption>Top-Down view of the trajectory of the quadrotor actively acquiring data to map and reconstruct a terrain. The KL-E3 algorithm is used to explore, where the distribution the quadrotor is matching is based on the importance distribution measure over the workspace (shown in the background).</figcaption>
-</figure>
+K-L divergence based control method focused on efficiently exploring high-dimensional search spaces safely for active, stable exploration. For efficient learning, we want to drive the exploration of the robot to prioritize obtaining more informative data. To do this, we defined an information distribution over the search space that represented the importance measure of the data (such as measures of linear independence from sparse Gaussian processes or measures representing model parameter uncertainty with respect to the search space). By defining the importance measure based on the state space, we generated a representation of the state space that prioritized states that generate highly informative data.
 
-We can then use information-based measures with hybrid control to generate controls that cover the search space and prioritizing high-information regions by matching the information distribution generated, while maintaining safety and stability constraints. The ergodic metric allows us to quantitatively define a measure that minimizes the distance between the information distribution and the time-averaged trajectory of the robot. Using it in the cost function allows us to generate controls that explore the full state-space while prioritizing high-information regions. The main limitation of the ergodic metric used in the active exploration algorithm is that the computational complexity of ergodicity exponentially increases with the dimensionality of the search space. To address this, we derive an active exploration algorithm using a sampling-based approximation of the ergodic metric using the Kullback-Leibler divergence metric. The sampling-based approximation allowed us to actively explore a much higher dimensional search space without sacrificing real-time control.
+{{< figure src="distr_match.gif" title="Using the KL-E3 method to actively acquire data to learn and match a distribution." lightbox="true" >}}
 
-<figure>
-  <img src="terrain_reconstruction.png" alt="Terrain Reconstruction"  height="131" width = "280"
-  />
-  <figcaption>The reconstruction of the terrain from the data acquired by the quadcopter exploring using the KL-E3 exploration algorithm.</figcaption>
-</figure>
+We then used information-based measures with hybrid control to generate controls that cover the search space and prioritizing high-information regions by matching the information distribution generated, while maintaining safety and stability constraints. The ergodic metric allows us to quantitatively define a measure that minimizes the distance between the information distribution and the time-averaged trajectory of the robot. Using it in the cost function allows us to generate controls that explore the full state-space while prioritizing high-information regions. The main limitation of the ergodic metric used in the active exploration algorithm is that the computational complexity of ergodicity exponentially increases with the dimensionality of the search space. To address this, we derive an active exploration algorithm using a sampling-based approximation of the ergodic metric using the Kullback-Leibler divergence metric. The sampling-based approximation allowed us to actively explore a much higher dimensional search space without sacrificing real-time control.
 
-## K-L Ergodic Exploration from Equilibrium
-
-My first work using the K-L divergence based control method focused on effienctly exploring high-dimenional search spaces and the dynamics of the system itself. By using the KL-Divergence metric to explore the information distribution over the search space that represents the importance measure of the data, we were able to actively explore from a stable equilibrium to safely learn about the dynamics of the system itself.
-
-<figure>
-  <img src="dynamics_learning.gif" alt="Dynamics Learning"  height="540" width = "243"
-  />
-  <figcaption>The quadcopter exploring its own dynamics safely from a stable equilibrium using the KL-E3 algorithm.</figcaption>
-</figure>
 
 For more information about this project, check out the [project page](https://murpheylab.github.io/projects/CyberPhysicalSystems) or the [paper](https://murpheylab.github.io/pdfs/2018WAFRAbPrMu.pdf) and its [Github repository](https://github.com/i-abr/kle3).
+
+{{< figure src="anim.gif" title="A robot using the KL-E3 method to sampling a state space (for Bayesian optimization) while taking into account dynamic constraints (keeping the cart double pendulum inverted)." lightbox="true" >}}
+
+
+
 
 ## Active Exploration for Learning Haptic Language
 

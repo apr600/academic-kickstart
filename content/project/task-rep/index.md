@@ -40,13 +40,18 @@ url_video: ""
 slides: ""
 ---
 
-People are extraordinarly good at crafting representations of tasks that takes into account the motion information necessary for successful task performance and filtering out the variable, extraneous motions from a single task execution. However, it can be difficult to construct similarly robust representations for robotics that can also be used to generate control signals for successful task performance. I use **distribution-based representations and information-theoretic measures to both represent the task information and generate motions that successfully accomplish the task** using standard model predictive control methods.
+People are extraordinarly good at crafting representations of tasks that takes into account the motion information necessary for successful task performance and filtering out the variable, extraneous motions from a single task execution. However, it can be difficult to construct similarly robust representations for robotics that can also be used to generate control signals for successful task performance. I use distribution-based representations and information-theoretic measures to both represent the task information and generate motions that successfully accomplish the task using standard model predictive control methods.
 
 ## Robotic Visual Rendering using Information-Theoretic Methods
 
+{{<youtube id="h2wnD6e4grw" autoplay="true" >}}
+
+
 Drawing is a classic example of tasks where the motions are used to successfully accomplish the task of communicating information. It falls into a unique subset of tasks where the motion is simultaneously essential for accomplishing the task, but there are many motion trajectories that can successfully accomplish it--- people may draw the same image completely different, but they ultimately result in the same image. I wanted to give the same level of robustness and generality to a robot's task performance.
 
-To do this, I represent the task as the distribution over the state space representing the relevant task state information. By representing the task as an information distribution, the definition can be abstracted away from the specific motion trajectories. This representation naturally accommodates uncertainty due to trajectory variability and multiple task solutions. Using this representation, I use an information-based metric **ergodicity** to define an objective function with model-based predictive control to generate controls that successfully accomplishes the task with the most efficient motion, given the system dynamics and initial conditions.
+
+
+To do this, I represent the task as the distribution over the state space representing the relevant task state information. By representing the task as an information distribution, the definition can be abstracted away from the specific motion trajectories. This representation naturally accommodates uncertainty due to trajectory variability and multiple task solutions. Using this representation, I use an information-based metric *ergodicity* to define an objective function with model-based predictive control to generate controls that successfully accomplishes the task with the most efficient motion, given the system dynamics and initial conditions.
 
 
 ## Learning from Variable, Imperfect Demonstrations using Ergodic Control
