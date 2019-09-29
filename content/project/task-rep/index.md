@@ -60,6 +60,7 @@ As robots become more ubiquitous in every day life, they will be interacting wit
 
 Here, I continue exploring the idea of representing the set of demonstrations as an information distribution over the task space. By considering each demonstration as adding information about the task, we can consider imperfect, and even unsuccessful, demonstrations as still adding valuable information about the task to the representation. As such, a set of imperfect demonstrations can collectively create a task representation from which we can generate controls for optimal task performance. Furthermore, this representation allows more flexibility in the demonstration set, allowing for multiple solution sets for the same task. By representing the task as information over the task space, multiple solutions can emerge from a demonstration set and variations that are irrelevant to task success will naturally be averaged out.
 
+<!--
 ### LfD for Area Coverage Tasks
 
 Consider a standard task such as cleaning a particular surface. In general, the specific motions and sequential order of task space visited does not matter to success. Instead, viewing the task as an *area coverage* over the task space, reflects this flexibility-- while also capturing specific regions that may require more time spent, such as around stovetops or corners.
@@ -68,4 +69,5 @@ Consider a standard task such as cleaning a particular surface. In general, the 
 
 ### LfD for Dynamic Tasks
 
-Even for more dynamically challenging tasks, such as the cart-pendulum inversion problem, this representation allows for successful controls. The cart-pendulum inversion problem is a classic problem that can be extremely challenging for people to demonstrate, due to the complicated dynamics of the system and the instability at the desired upright state. As such, a set of demonstrations from human demonstrators, especially non-expert ones, are highly imperfect, and rarely successfully stabilize in the upright position. 
+Even for more dynamically challenging tasks, such as the cart-pendulum inversion problem, this representation allows for successful controls. The cart-pendulum inversion problem is a classic problem that can be extremely challenging for people to demonstrate, due to the complicated dynamics of the system and the instability at the desired upright state. As such, a set of demonstrations from human demonstrators, especially non-expert ones, are highly imperfect, and rarely successfully stabilize in the upright position.
+-->
