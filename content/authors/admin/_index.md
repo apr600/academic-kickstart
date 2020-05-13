@@ -18,13 +18,13 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include robot learning from high-dimensional sensory signals and human demonstrations and human-swarm collaboration using information-theoretic algorithms.
+bio: My research interests include robot active learning from high-dimensional sensory signals and human demonstrations and human-swarm collaboration using information-theoretic algorithms.
 
 interests:
-- Information-Theoretic Task Representation
-- High Dimensional Robot Learning
-- Learning from Demonstrations
+- High-Dimensional Robot Learning
+- Information-Theoretic Compressible Representations
 - Human-Swarm Collaboration
+- Learning from Demonstrations
 
 education:
   courses:
@@ -71,4 +71,4 @@ email: ""
 # - Visitors
 ---
 
-I am a Ph.D. Candidate in Robotics at Northwestern University in Prof.  Todd Murphey's lab. My work focuses on robot learning for flexible task representations from variable, imperfect human demonstrations and high-dimensional sensory learning using distribution-based representations and information-theoretic measures. I am also the Team Lead on the DARPA OFFSET Sprint 3 Project, developing autonomous swarm algorithms for perception augmentation and exploring their efficacy in aiding an operator's situational awareness. 
+I am a Ph.D. Candidate in Robotics at Northwestern University in Prof.  Todd Murphey's lab. My work focuses on robot learning for flexible task representations from variable, imperfect human demonstrations and high-dimensional sensory learning using distribution-based representations and information-theoretic measures. I also lead Northwestern's project for the DARPA OFFSET Urban Swarm Challenge, developing autonomous swarm algorithms for shared human-swarm collaboration and exploring their efficacy in aiding task performance under dynamic, time-sensitive constraints. 
