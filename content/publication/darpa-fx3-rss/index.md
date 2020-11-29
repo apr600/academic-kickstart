@@ -2,7 +2,7 @@
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
 title: "Ergodic Specifications for Flexible Swarm Control: From User Commands to Persistent Adaptation"
-authors: [ A. Prabhakar, I. Abraham, A. Taylor, M. Schlafly, K. Popovic  and T.D. Murphey]
+authors: [ A. Prabhakar, I. Abraham, A. Taylor, M. Schlafly, K. Popovic, G. Diniz, B. Teich, B. Simidchieva, S.Clark  and T.D. Murphey]
 date: 2020-05-13T12:11:23-05:00
 doi: ""
 
@@ -49,13 +49,19 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
+links:
+- name: Project Website
+  url: http://sites.google.com/view/ergodic-flexible-swarm-control/home
+
+- name: Code
+  url: https://github.com/apr600/ErgodicHumanSwarmCollab
+url_pdf: 
+url_code: 
 url_dataset:
 url_poster:
-url_project:
+url_project:  
 url_slides:
-url_source:
+url_source: 
 url_video:
 
 # Featured image

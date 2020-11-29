@@ -10,11 +10,11 @@ authors:
 superuser: true
 
 # Role/position
-role: Ph.D. Candidate in Robotics
+role: Postdoctoral Research Fellow in Robotics
 
 # Organizations/Affiliations
 organizations:
-- name: Northwestern University
+- name: École Polytechnique Fédérale de Lausanne (EPFL)
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
@@ -22,15 +22,15 @@ bio: My research interests include robot active learning from high-dimensional s
 
 interests:
 - High-Dimensional Robot Learning
-- Information-Theoretic Compressible Representations
-- Human-Swarm Collaboration
+- Information-Theoretic Motion Representations
+- Human-Robot Collaboration
 - Learning from Demonstrations
 
 education:
   courses:
   - course: PhD in Mechanical Engineering
     institution: Northwestern University
-    year: In Progress
+    year: 2020
   - course: MSc in Mechanical Engineering
     institution: Northwestern University
     year: 2016
@@ -71,4 +71,4 @@ email: ""
 # - Visitors
 ---
 
-I am a Ph.D. Candidate in Robotics at Northwestern University in Prof.  Todd Murphey's lab. My work focuses on robot learning for flexible task representations from variable, imperfect human demonstrations and high-dimensional sensory learning using distribution-based representations and information-theoretic measures. I also lead Northwestern's project for the DARPA OFFSET Urban Swarm Challenge, developing autonomous swarm algorithms for shared human-swarm collaboration and exploring their efficacy in aiding task performance under dynamic, time-sensitive constraints. 
+I am a Postdoctoral Research Fellow in the Learning Algorithms and Systems (LASA) lab at EPFL under Prof. Aude Billard. My work focuses on developing learning and control algorithms for efficient human-robot collaboration and learning. I obtained my Ph.D. in Robotics at Northwestern University in Prof.  Todd Murphey's lab. My Ph.D. work centered on information communication algorthms to enable intuitive human-robot collaboration and efficient robot learning using distribution-based motion representations and information-theoretic measures. I also led Northwestern's team for the DARPA OFFSET Urban Swarm Challenge, developing autonomous swarm algorithms for shared human-swarm collaboration and exploring their efficacy in aiding task performance under dynamic, time-sensitive constraints. 
